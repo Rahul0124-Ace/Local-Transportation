@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Routiva</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Routiva</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+
+        <section class="auth-intro">
+            <p class="hero-tagline">JOIN ROUTIVA</p>
+            <h2>Your city is waiting to be explored.</h2>
+            <p>
+                Create your account and start planning your journeys
+                around the city.
+            </p>
+        </section>
+
+        <section class="form-container">
+            <h2>Create Your Account</h2>
+            <p class="form-subtitle">It only takes a moment to get started.</p>
+
+            <form id="registerForm">
+
+                <label for="name">Full name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email">Email address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create a password"
+                    autocomplete="new-password"
+                    minlength="6"
+                    required
+                >
+
+                <button type="submit">Create Account →</button>
+
+                <p id="message" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="form-switch">
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Routiva | Your city. Your route. Your way.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

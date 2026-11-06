@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Routiva</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Routiva</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="routes.html">Plan Journey</a>
+            <a href="index.html" id="logoutLink">Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-page">
+        <section class="dashboard-welcome">
+            <p class="hero-tagline">YOUR CITY. YOUR ROUTE. YOUR WAY.</p>
+            <h2 id="welcomeMessage">Welcome back!</h2>
+            <p>Where would you like to go today?</p>
+            <a class="button" href="routes.html">Plan a Journey →</a>
+        </section>
+
+        <section class="dashboard-features">
+            <a class="dashboard-card" href="routes.html">
+                <span>🚌</span>
+                <h3>City Bus Explorer</h3>
+                <p>Explore available bus routes for your journey.</p>
+                <strong>Explore routes →</strong>
+            </a>
+
+            <a class="dashboard-card" href="routes.html">
+                <span>📍</span>
+                <h3>Live Location</h3>
+                <p>Use your location to help plan a trip.</p>
+                <strong>Plan a trip →</strong>
+            </a>
+
+            <a class="dashboard-card" href="routes.html">
+                <span>💰</span>
+                <h3>Fare Guide</h3>
+                <p>View fare estimates when information is available.</p>
+                <strong>Check a journey →</strong>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Routiva | Your city. Your route. Your way.</p>
+    </footer>
+
+    <script>
+       const storedUser = sessionStorage.getItem("localTransportUser");
+
+        if (!storedUser) {
+            window.location.href = "login.html";
+        } else {
+            let userName = "Traveller";
+
+            try {
+                const user = JSON.parse(storedUser);
+                userName = user.name || user.fullName || user.username || userName;
+            } catch (error) {
+                userName = storedUser;
+            }
+
+            document.getElementById("welcomeMessage").textContent =
+                "Welcome back, " + userName + "!";
+        }
+
+        document.getElementById("logoutLink").addEventListener("click", function (event) {
+            event.preventDefault();
+            sessionStorage.removeItem("loggedInUser");
+            window.location.href = "login.html";
+        });
+    </script>
+
+</body>
+</html>

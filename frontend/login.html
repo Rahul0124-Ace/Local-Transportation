@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Routiva</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Routiva</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-intro">
+            <p class="hero-tagline">WELCOME BACK</p>
+            <h2>Your next journey starts here.</h2>
+            <p>Sign in to continue exploring your city with Routiva.</p>
+        </section>
+
+        <section class="form-container">
+            <h2>Login to Routiva</h2>
+            <p class="form-subtitle">Enter your details to continue.</p>
+
+            <form id="loginForm">
+                <label for="email">Email address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit">Login →</button>
+                <p id="message" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="form-switch">
+                Don't have an account?
+                <a href="register.html">Create one</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Routiva | Your city. Your route. Your way.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

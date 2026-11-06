@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bus Map | Routiva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+<body>
+
+    <header>
+        <h1>Routiva</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="routes.html">Plan Journey</a>
+            <a href="bus-results.html">Bus Results</a>
+        </nav>
+    </header>
+
+    <main class="bus-map-page">
+        <section class="bus-results-hero">
+            <p class="hero-tagline">YOUR JOURNEY, ON THE MAP</p>
+            <h2 id="mapTitle">Bus Route Map</h2>
+            <p id="mapDescription">
+                Route map information will appear here when verified data is available.
+            </p>
+        </section>
+
+        <section class="bus-map-content">
+            <a class="back-link" href="bus-results.html">← Back to bus results</a>
+
+            <div id="busMap"></div>
+
+            <p id="mapMessage" role="status" aria-live="polite">
+                This map shows the city area, not a confirmed bus route.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Routiva | Your city. Your route. Your way.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/bus-map.js"></script>
+</body>
+</html>

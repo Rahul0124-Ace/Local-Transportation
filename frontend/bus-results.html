@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journey Map | Routiva</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css"
+  >
+
+  <style>
+    .journey-map-section {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    #journeyMap {
+      width: 100%;
+      height: 540px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #e8edf0;
+    }
+
+    .journey-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .journey-point {
+      padding: 12px 16px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #d7e0e8;
+    }
+
+    #busRouteList {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .route-card {
+      background: white;
+      border: 1px solid #d7e0e8;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .route-card h3 {
+      margin-top: 0;
+    }
+
+    .route-card p {
+      overflow-wrap: anywhere;
+    }
+
+    .map-note {
+      margin-top: 12px;
+      color: #52677c;
+    }
+
+    @media (max-width: 600px) {
+      #journeyMap {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Routiva</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="routes.html">Plan Journey</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="bus-results-page">
+    <section class="bus-results-hero">
+      <p class="hero-tagline">YOUR JOURNEY, MADE SIMPLE</p>
+      <h2>Your Journey Map</h2>
+      <p id="journeySummary">Loading your journey...</p>
+    </section>
+
+    <section class="journey-map-section">
+      <a class="back-link" href="routes.html">← Change journey</a>
+
+      <div class="journey-points">
+        <div class="journey-point">
+          <strong>Starting point</strong>
+          <div id="startPoint">Loading...</div>
+        </div>
+
+        <div class="journey-point">
+          <strong>Destination</strong>
+          <div id="endPoint">Loading...</div>
+        </div>
+      </div>
+
+      <div id="journeyMap" aria-label="Interactive bus route map"></div>
+
+      <p id="resultsMessage" class="map-note" role="status">
+        Loading BMTC route data...
+      </p>
+
+      <h2>Matching BMTC Buses</h2>
+      <div id="busRouteList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Routiva | Your city. Your route. Your way.</p>
+  </footer>
+
+  <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+  <script src="js/bus-results.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+[
+    {
+        "routeNumber": "SAMPLE-1",
+        "start": "Majestic",
+        "destination": "Electronic City",
+        "busType": "Sample public bus",
+        "fare": null,
+        "travelTimeMinutes": null,
+        "verified": false
+    },
+    {
+        "routeNumber": "SAMPLE-2",
+        "start": "Majestic",
+        "destination": "Whitefield",
+        "busType": "Sample public bus",
+        "fare": null,
+        "travelTimeMinutes": null,
+        "verified": false
+    },
+    {
+        "routeNumber": "SAMPLE-3",
+        "start": "Majestic",
+        "destination": "Hebbal",
+        "busType": "Sample public bus",
+        "fare": null,
+        "travelTimeMinutes": null,
+        "verified": false
+    }
+]

@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Journey | Routiva</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Routiva</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="routes.html">Plan Journey</a>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main class="journey-page">
+
+        <section class="journey-intro">
+            <p class="hero-tagline">YOUR NEXT ADVENTURE STARTS HERE</p>
+            <h2>Where do you want to go?</h2>
+            <p>Enter your starting point and destination to explore your journey.</p>
+        </section>
+
+        <section class="journey-panel">
+            <div class="journey-heading">
+                <span class="journey-icon">🚌</span>
+                <div>
+                    <h3>Plan your journey</h3>
+                    <p>Choose where your trip begins and ends.</p>
+                </div>
+            </div>
+
+            <form id="journeyForm">
+
+                <label for="start">Starting point</label>
+                <input
+                    type="text"
+                    id="start"
+                    name="start"
+                    placeholder="Type a starting area..."
+                    list="placeSuggestions"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="button" id="locationButton">
+                    📍 Use My Current Location
+                </button>
+
+                <label for="destination">Destination</label>
+                <input
+                    type="text"
+                    id="destination"
+                    name="destination"
+                    placeholder="Type your destination..."
+                    list="placeSuggestions"
+                    autocomplete="off"
+                    required
+                >
+
+                <datalist id="placeSuggestions">
+                    <option value="Majestic"></option>
+                    <option value="Marathahalli"></option>
+                    <option value="Margodi"></option>
+                    <option value="Electronic City"></option>
+                    <option value="Whitefield"></option>
+                    <option value="Hebbal"></option>
+                    <option value="Indiranagar"></option>
+                    <option value="Koramangala"></option>
+                    <option value="Silk Board"></option>
+                    <option value="KR Market"></option>
+                </datalist>
+
+                <button class="button journey-submit" type="submit">
+                    Find Bus Routes →
+                </button>
+
+            </form>
+
+            <p id="journeyMessage" role="status" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Routiva | Your city. Your route. Your way.</p>
+    </footer>
+
+    <script src="js/routes.js"></script>
+</body>
+</html>
